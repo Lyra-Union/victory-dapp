@@ -20,6 +20,9 @@ import { ConnectBtn } from "../wallet_components/connectEvm";
 import Profile from "../wallet_components/evmWalletProfile";
 import { ethers } from "ethers";
 import fyreData from "../abi/FyreToken.json";
+import { HederaWalletProvider } from '../wallet_components/hederaWallet';
+import { WalletConnectButton } from '../components/WalletConnectButton';
+import { TransactionExample } from '../components/TransactionExample';
 
 interface PurchaseHistory {
   date: string;
@@ -127,7 +130,20 @@ const TokenBody: React.FC = () => {
 
             <div className="flex items-center space-x-4">
               <Card className="p-2 card-gradient border-border/50">
-                <Wallet />
+                <HederaWalletProvider>
+                    
+                      <div className="flex justify-between items-center mb-8">
+                        <h1 className="text-3xl font-bold text-gray-900">Hedera Wallet Connect</h1>
+                        <WalletConnectButton />
+                      </div>
+                      
+                      {/*<div className="grid gap-8">
+                        <TransactionExample />
+                        
+                        {/* Add more components as needed
+                      </div>*/}
+                    
+                </HederaWalletProvider>
               </Card>
               <Card className="p-2 card-gradient border-border/50">
                 <div className="flex items-center space-x-2">
@@ -178,7 +194,7 @@ const TokenBody: React.FC = () => {
                   ) : (
                     <div className="flex items-center space-x-2">
                       <ArrowUpRightIcon className="h-4 w-4" />
-                      <span>Purchase FYRE</span>
+                      <span>Purchase SPARK</span>
                     </div>
                   )}
               </Button>
@@ -314,7 +330,7 @@ const TokenBody: React.FC = () => {
 
             <div className="p-4 bg-warning/10 rounded-lg border border-warning/20">
               <p className="text-sm text-warning font-medium">
-                <strong>Governance Notice:</strong> FYRE tokens are community tokens and do not provide governance
+                <strong>Governance Notice:</strong> SPARK tokens are community tokens and do not provide governance
                 rights.
               </p>
             </div>

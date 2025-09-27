@@ -2,11 +2,11 @@ import { Chain, getDefaultConfig } from '@rainbow-me/rainbowkit';
 import { http, createStorage, cookieStorage } from 'wagmi';
 
 import {
-  aurora,
-  auroraTestnet,
+  mainnet,
+  sepolia,
 } from 'wagmi/chains';
 
-const supportedChains: Chain[] = [aurora, auroraTestnet];
+const supportedChains: Chain[] = [mainnet, sepolia];
 
 export const config = getDefaultConfig({
   appName: 'RainbowKit App',

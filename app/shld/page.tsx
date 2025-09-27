@@ -11,6 +11,9 @@ import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Loader2, Wallet, Shield, Users, Zap, ArrowRight, CheckCircle } from "lucide-react"
+import { HederaWalletProvider } from '../wallet_components/hederaWallet';
+import { WalletConnectButton } from '../components/WalletConnectButton';
+import { TransactionExample } from '../components/TransactionExample';
 
 // Dynamically import wallet components to prevent SSR issues
 const WalletComponent = dynamic(() => import("../wallet_components/ploygonwallet"), {
@@ -166,7 +169,20 @@ const TokenBody = () => {
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <WalletComponent />
+                  <HederaWalletProvider>
+                                      
+                                        <div className="flex justify-between items-center mb-8">
+                                          <h1 className="text-3xl font-bold text-gray-900">Hedera Wallet Connect</h1>
+                                          <WalletConnectButton />
+                                        </div>
+                                        
+                                        {/*<div className="grid gap-8">
+                                          <TransactionExample />
+                                          
+                                          {/* Add more components as needed
+                                        </div>*/}
+                                      
+                  </HederaWalletProvider>
                   <div className="flex items-center space-x-2">
                     <ConnectBtn />
                     <Profile />
@@ -389,8 +405,8 @@ const TokenBody = () => {
                   Governance & Rights
                 </h3>
                 <p className="text-muted-foreground">
-                  Each NFT provides links to <strong>MANA rights</strong> with <strong>Sovereign ID</strong>
-                  for governance within the cooperative, giving you a voice in the ecosystem's future.
+                  Each NFT provides links to <strong>AXIS rights</strong> with <strong>Sovereign ID</strong>
+                  for governance within the cooperative, giving you a voice in the ecosystem&apos;s future.
                 </p>
               </div>
             </div>

@@ -10,6 +10,9 @@ import { connect, keyStores, WalletConnection } from "near-api-js"
 //import { SHLD_CONTRACT } from "../shld/shldContractInteractions"; //according to shld_contract file
 //import manaData from "../abi/ManaToken.json";
 //import fyreData from "../abi/FyreToken.json";
+import { HederaWalletProvider } from '../wallet_components/hederaWallet';
+import { WalletConnectButton } from '../components/WalletConnectButton';
+import { TransactionExample } from '../components/TransactionExample';
 
 interface StakingHistory {
   staker: string
@@ -182,7 +185,20 @@ const TokenBody: React.FC = () => {
         <h2 className="text-[#ce711e] text-5xl font-bold mb-8">AXIS Token</h2>
         <div className="flex justify-center space-x-4">
           <div className="bg-[#ce711e] hover:bg-[#a85a18] text-white font-bold py-2 px-4 rounded">
-            <Wallet />
+              <HederaWalletProvider>
+                               
+                <div className="flex justify-between items-center mb-8">
+                    <h1 className="text-3xl font-bold text-gray-900">Hedera Wallet Connect</h1>
+                        <WalletConnectButton />
+                    </div>
+                                 
+                                 {/*<div className="grid gap-8">
+                                   <TransactionExample />
+                                   
+                                   {/* Add more components as needed
+                                 </div>*/}
+                               
+              </HederaWalletProvider>
           </div>
           <div className="bg-[#ce711e] hover:bg-[#a85a18] text-white font-bold py-2 px-4 rounded">
             <ConnectBtn />
