@@ -40,21 +40,6 @@
 └── /public               # Public assets
 ```
 
-## Installation
-- Clone the Repository:
-  ```bash
-  git clone https://github.com/your-username/victory-exchange.git
-  cd victory-exchange
-  ```
-- Install dependencies:
-  ```bash
-  npm install
-  ```
-- Run the development server:
-  ```bash
-  npm run dev
-  ```
-- Open http://localhost:3000 in your browser to see the application.
 
 ## Usage
 After setting up the project and running the development server, users can:
