@@ -2,15 +2,6 @@
 
 **Victory Exchange** is a decentralized platform built on Ethereum, offering interaction with three primary tokens: **SPARK**, **AXIS**, and **PRISM**. The platform allows users to purchase, contribute, and exchange these tokens while providing integration for Ethereum.
 
-## Table of Contents
-
-- [Key Features](#key-features)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Technologies Used](#technologies-used)
-- [License](#license)
-- [Contributing](#contributing)
 
 ## Key Features
 
